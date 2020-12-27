@@ -1,26 +1,22 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
-import { HttpModule } from '@angular/http';
+import { BrowserModule } from "@angular/platform-browser";
+import { NgModule } from "@angular/core";
+import { FormsModule } from "@angular/forms";
+import { HttpModule } from "@angular/http";
 
-import { AppComponent } from './app.component';
-import { BasicHighlightDirective } from './basic-highlight.directive';
-import { BetterHighlightDirective } from './better-highlight.directive';
-import { UnlessDirective } from './unless.directive';
+import { AppComponent } from "./app.component";
+import { BasicHighlightDirective } from "./shared/directives/basic-highlight.directive";
+import { BetterHighlightDirective } from "./shared/directives/better-highlight.directive";
+import { UnlessDirective } from "./shared/directives/unless.directive";
 
 @NgModule({
   declarations: [
     AppComponent,
     BasicHighlightDirective,
     BetterHighlightDirective,
-    UnlessDirective
+    UnlessDirective,
   ],
-  imports: [
-    BrowserModule,
-    FormsModule,
-    HttpModule
-  ],
+  imports: [BrowserModule, FormsModule, HttpModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
